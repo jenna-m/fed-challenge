@@ -24,7 +24,7 @@ function Navigation() {
 						<li>Sleep</li>
 					</ul>
 				</div>
-				<div id="sign-up-button">
+				<div id="nav-button">
 					<button>Sign Up</button>
 				</div>
 			</nav>
