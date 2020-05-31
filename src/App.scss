@@ -1,38 +1,72 @@
-.App {
-  text-align: center;
+// Font variables
+$open-sans: 'Open Sans', sans-serif;
+
+// Color variables
+$white: #fff;
+$nav-border: #d5d6d6;
+$nav-font: rgba(46, 49, 52, 0.8);
+$review-background: #f4f5f7;
+$footer-background: #2e3134;
+$body-font: #2e3134;
+$footer-font: #fff;
+$blue: #0069d2;
+
+body {
+	background-color: $white;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: $open-sans;
+	font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+	display: inline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+// Navigation styling
+#navigation {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 100%;
+	text-transform: uppercase;
+	color: $nav-font;
+	letter-spacing: 1px;
+	text-align: center;
+	line-height: 14px;
 }
 
-.App-link {
-  color: #61dafb;
+#top-nav {
+	height: 47px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border-bottom: 1px solid $nav-border;
+	li {
+		padding: 0 45px;
+		border-right: 1px solid $nav-border;
+	}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#sub-nav {
+	margin: 0 23px 0 40px;
+	height: 72px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
+
+#sub-nav-ul li {
+	padding: 40px;
+}
+
+// Hero Styling
