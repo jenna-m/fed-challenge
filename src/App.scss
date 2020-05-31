@@ -32,6 +32,15 @@ li {
 	display: inline;
 }
 
+button {
+	background-color: $blue;
+	color: $white;
+	font-size: 14px;
+	text-transform: uppercase;
+	border: 0px;
+	border-radius: 5px;
+}
+
 // Navigation styling
 #navigation {
 	display: flex;
@@ -69,4 +78,39 @@ li {
 	padding: 40px;
 }
 
+#nav-button button {
+	padding: 10px 15px;
+	box-shadow: 0 1px 2px 0 rgba(46, 49, 52, 0.4);
+	letter-spacing: 0.5px;
+	line-height: 16px;
+}
+
 // Hero Styling
+#hero {
+	height: 800px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: url('./images/hero.png');
+	background-position-x: right;
+}
+
+#hero-message {
+	width: 75%;
+	color: $white;
+	font-size: 72px;
+	letter-spacing: 1px;
+	text-align: center;
+	line-height: 90px;
+}
+
+#hero-button button {
+	margin-top: 50px;
+	padding: 20px 130px;
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+	letter-spacing: 1px;
+	text-align: center;
+	line-height: 14px;
+}
