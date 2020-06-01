@@ -6,6 +6,8 @@ $white: #fff;
 $nav-border: #d5d6d6;
 $nav-font: rgba(46, 49, 52, 0.8);
 $review-background: #f4f5f7;
+$playlist-background: rgba(0, 12, 40, 0.54);
+$equipment-heading: #34383c;
 $footer-background: #2e3134;
 $body-font: #2e3134;
 $footer-font: #fff;
@@ -94,7 +96,6 @@ button {
 	align-items: center;
 	justify-content: center;
 	background: url('./images/hero.png');
-	background-position-x: right;
 }
 
 #hero-message {
@@ -104,9 +105,25 @@ button {
 	letter-spacing: 1px;
 	text-align: center;
 	line-height: 90px;
+	// Hero Animation
+	span {
+		-moz-animation: fade-in 5s;
+		-webkit-animation: fade-in 5s;
+		animation: fade-in 5s;
+	}
+
+	@keyframes fade-in {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
 }
 
-#hero-button button {
+#hero-message #hero-button button {
 	margin-top: 50px;
 	padding: 20px 130px;
 	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
@@ -119,33 +136,217 @@ button {
 #reviews-container {
 	padding: 25px 0;
 	display: flex;
-	flex: 1;
 	align-items: center;
-	justify-items: space-between;
+	justify-content: space-between;
 	background-color: $review-background;
 }
 
 .review-card {
+	width: 25%;
 	padding: 50px;
 	display: flex;
-	flex: 1;
 	flex-direction: column;
 	align-items: center;
-	box-shadow: 0 1px 2px 0 rgba(46, 49, 52, 0.4);
 	background-color: $white;
-	opacity: 0.8;
+	border-radius: 5px;
+	box-shadow: 0 1px 2px 0 rgba(46, 49, 52, 0.4);
+}
+
+.review-text {
 	color: $body-font;
 	font-size: 16px;
 	letter-spacing: 0.3px;
 	text-align: center;
 	line-height: 24px;
+	opacity: 0.8;
 }
 
 // Workouts Styling
 #workouts-container {
-	margin: 50px 0;
-	width: 80%;
+	margin: 0 auto;
+	padding-top: 50px;
+	width: 90%;
 	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-evenly;
+}
+
+.workout-card {
+	margin-bottom: 25px;
+	width: 288px;
+	height: 280px;
+	font-size: 10px;
+	letter-spacing: 0.3px;
+	line-height: 12px;
+	border-radius: 5px;
+	box-shadow: 0 1px 2px 0 rgba(46, 49, 52, 0.4);
+	cursor: pointer;
+}
+
+.workout-image {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.workout-playlist-overlay {
+	padding: 25px 0;
+	width: 110px;
+	height: 114px;
+	z-index: 0;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	background: $playlist-background;
+	color: $white;
+	text-align: center;
+	font-size: 10px;
+	letter-spacing: 0.3px;
+	line-height: 12px;
+	text-transform: uppercase;
+	border-radius: 0 5px 0 0;
+	img {
+		padding-top: 10px;
+		width: 25px;
+	}
+}
+
+.workout-quantity {
+	font-family: LeagueGothic-Regular;
+	font-size: 28px;
+	letter-spacing: 0.5px;
+	line-height: 30px;
+}
+
+.workout-info {
+	padding: 16px 17px;
+	max-width: 89%;
+	height: 116px;
+	display: flex;
 	justify-content: space-between;
+}
+
+.workout-title {
+	padding-bottom: 10px;
+	width: 230px;
+	font-size: 16px;
+	letter-spacing: 0.3px;
+	text-align: left;
+	line-height: 18px;
+}
+
+.workout-stats {
+	span {
+		padding: 0 10px 0 5px;
+	}
+	img {
+		max-width: 10px;
+	}
+}
+
+.view-details-toggle {
+	display: none;
+	padding: 12px 0;
+	font-size: 14px;
+	color: $blue;
+	letter-spacing: 0.5px;
+	line-height: 16px;
+	text-transform: uppercase;
+}
+
+.workout-card:hover .view-details-toggle {
+	display: block;
+}
+
+// Equipment Section Styling
+#equipment-container {
+	padding: 50px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h3 {
+		opacity: 0.8;
+		font-size: 24px;
+		color: $equipment-heading;
+		letter-spacing: 0.3px;
+		text-align: center;
+		line-height: 28px;
+		font-weight: normal;
+	}
+}
+
+#equipment-cards-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: flex-start;
+}
+
+.equipment-card {
+	width: 22%;
+	padding: 25px 0 0 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: $white;
+	border-radius: 5px;
+	box-shadow: 0 1px 2px 0 rgba(46, 49, 52, 0.4);
+}
+
+.equipment-image img {
+	max-height: 228px;
+}
+
+.equipment-text {
+	opacity: 0.8;
+	font-size: 24px;
+	color: $body-font;
+	letter-spacing: 0.3px;
+	text-align: center;
+	line-height: 28px;
+}
+
+// Footer Styling
+#footer-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: $footer-background;
+	color: $white;
+	font-size: 14px;
+}
+
+#footer-menu {
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-submenu {
+	padding: 50px 0;
+}
+
+.footer-submenu ul:before {
+	content: attr(aria-label);
+	font-size: 14px;
+	letter-spacing: 0.5px;
+}
+
+.footer-submenu li {
+	display: block;
+	opacity: 0.8;
+	letter-spacing: 0.3px;
+	text-align: left;
+	transition: opacity, 0.2s, ease-in-out;
+}
+
+.footer-submenu li:hover {
+	opacity: 1;
+	cursor: pointer;
 }
