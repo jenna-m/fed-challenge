@@ -1,5 +1,12 @@
 import React from 'react';
 
+// Import social media icons
+import youtube from '../images/socialMedia/youtube.png';
+import pinterest from '../images/socialMedia/pinterest.png';
+import facebook from '../images/socialMedia/facebook.png';
+import twitter from '../images/socialMedia/twitter.png';
+import instagram from '../images/socialMedia/instagram.png';
+
 function Footer() {
 	return (
 		<div id="footer-container">
@@ -24,8 +31,35 @@ function Footer() {
 					</ul>
 				</div>
 			</div>
-			<div id="footer-social">Social Media Links</div>
-			<div id="footer-legal">Footer Legal Info</div>
+			<div id="footer-social">
+				<ul>
+					<li>
+						<img src={youtube} alt="YouTube" />
+					</li>
+					<li>
+						<img src={pinterest} alt="Pinterest" />
+					</li>
+					<li>
+						<img src={facebook} alt="Facebook" />
+					</li>
+					<li>
+						<img src={twitter} alt="Twitter" />
+					</li>
+					<li>
+						<img src={instagram} alt="Instagram" />
+					</li>
+				</ul>
+			</div>
+			<div id="footer-bottom">
+				<div id="footer-language">English</div>
+				<div id="footer-legal">
+					<ul>
+						<li>© iFit.com. All Rights Reserved.</li>
+						<li className="legal">Privacy Policy</li>
+						<li className="legal">Terms of Use</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	);
 }
