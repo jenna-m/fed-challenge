@@ -60,13 +60,13 @@ function Workouts() {
 		return (
 			<div className="workout-card">
 				<div className="workout-info">
+					<div className="workout-image">
+						<img src={workout.src} alt={workout.title} />
+						{showPlaylist()}
+					</div>
 					<div className="workout-text">
 						<div className="workout-title">
 							<span>{workout.title}</span>
-						</div>
-						<div className="workout-image">
-							<img src={workout.src} alt={workout.title} />
-							{showPlaylist()}
 						</div>
 						{renderStats()}
 						{/* show on hover */}
