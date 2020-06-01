@@ -16,7 +16,7 @@ function Reviews() {
 			</div>
 		);
 	});
-	return <div id="reviews">{reviews}</div>;
+	return <div id="reviews-container">{reviews}</div>;
 }
 
 export default Reviews;
