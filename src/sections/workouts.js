@@ -13,10 +13,11 @@ function Workouts() {
 		const showPlaylist = () => {
 			if (workout.isPlaylist) {
 				return (
-					<div className="workout-playlist">
+					<div className="workout-playlist-overlay">
 						<span className="workout-quantity">
 							{workout.quantity}
-						</span>{' '}
+						</span>
+						<br />
 						<span>Workouts</span>{' '}
 						<img src={playlistIcon} alt="Playlist Icon" />
 					</div>
@@ -38,18 +39,14 @@ function Workouts() {
 									src={timeIcon}
 									alt="Icon representing a stopwatch"
 								/>
-								<span className="workout-stats">
-									{workout.time}
-								</span>
+								<span>{workout.time}</span>
 							</li>
 							<li>
 								<img
 									src={distanceIcon}
 									alt="Icon representing distance"
 								/>
-								<span className="workout-stats">
-									{workout.distance}
-								</span>
+								<span>{workout.distance}</span>
 							</li>
 						</ul>
 					</div>
@@ -59,11 +56,11 @@ function Workouts() {
 		// return mapped workout
 		return (
 			<div className="workout-card">
+				<div className="workout-image">
+					<img src={workout.src} alt={workout.title} />
+					{showPlaylist()}
+				</div>
 				<div className="workout-info">
-					<div className="workout-image">
-						<img src={workout.src} alt={workout.title} />
-						{showPlaylist()}
-					</div>
 					<div className="workout-text">
 						<div className="workout-title">
 							<span>{workout.title}</span>
@@ -74,9 +71,9 @@ function Workouts() {
 							<span>View Details</span>
 						</div>
 					</div>
-				</div>
-				<div className="trainer-info">
-					<img src={workout.avatar} alt={workout.trainerName} />
+					<div className="trainer-info">
+						<img src={workout.avatar} alt={workout.trainerName} />
+					</div>
 				</div>
 			</div>
 		);
