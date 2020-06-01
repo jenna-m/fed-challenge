@@ -81,7 +81,7 @@ function Workouts() {
 			</div>
 		);
 	});
-	return <div id="workouts">{workouts}</div>;
+	return <div id="workouts-container">{workouts}</div>;
 }
 
 export default Workouts;
