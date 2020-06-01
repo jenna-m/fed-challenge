@@ -11,6 +11,7 @@ $equipment-heading: #34383c;
 $footer-background: #2e3134;
 $body-font: #2e3134;
 $footer-font: #fff;
+$social-border: #585a5d;
 $blue: #0069d2;
 
 body {
@@ -63,8 +64,11 @@ button {
 	align-items: center;
 	border-bottom: 1px solid $nav-border;
 	li {
-		padding: 0 45px;
+		padding: 12px 45px;
 		border-right: 1px solid $nav-border;
+	}
+	li:hover {
+		cursor: pointer;
 	}
 }
 
@@ -182,6 +186,12 @@ button {
 	border-radius: 5px;
 	box-shadow: 0 1px 2px 0 rgba(46, 49, 52, 0.4);
 	cursor: pointer;
+	// Grow animation on hover
+	transition: transform 0.3s ease-in-out;
+}
+
+.workout-card:hover {
+	transform: scale(1.05);
 }
 
 .workout-image {
@@ -330,23 +340,65 @@ button {
 
 .footer-submenu {
 	padding: 50px 0;
+	ul:before {
+		content: attr(aria-label);
+		font-size: 14px;
+		letter-spacing: 0.5px;
+	}
+	li {
+		display: block;
+		opacity: 0.8;
+		letter-spacing: 0.3px;
+		text-align: left;
+		transition: opacity, 0.2s, ease-in-out;
+	}
+	li:hover {
+		opacity: 1;
+		cursor: pointer;
+	}
 }
 
-.footer-submenu ul:before {
-	content: attr(aria-label);
+#footer-social {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	border-top: 2px solid $social-border;
+	border-bottom: 2px solid $social-border;
+	ul {
+		padding: 15px 0;
+	}
+	li {
+		padding: 0 15px;
+	}
+}
+
+#footer-bottom {
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px 30px;
+	display: flex;
+	align-items: center;
+}
+
+#footer-language {
+	width: 30%;
+}
+
+#footer-legal {
+	width: 70%;
 	font-size: 14px;
-	letter-spacing: 0.5px;
-}
-
-.footer-submenu li {
-	display: block;
-	opacity: 0.8;
+	color: $white;
 	letter-spacing: 0.3px;
 	text-align: left;
-	transition: opacity, 0.2s, ease-in-out;
-}
-
-.footer-submenu li:hover {
-	opacity: 1;
-	cursor: pointer;
+	line-height: 16px;
+	li {
+		padding: 0 20px;
+	}
+	.legal {
+		opacity: 0.8;
+	}
+	.legal:hover {
+		opacity: 1;
+		cursor: pointer;
+	}
 }
