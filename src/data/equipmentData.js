@@ -22,3 +22,5 @@ const equipmentData = [
 		src: strength,
 	},
 ];
+
+export default equipmentData;
