@@ -7,6 +7,9 @@ import facebook from '../images/socialMedia/facebook.png';
 import twitter from '../images/socialMedia/twitter.png';
 import instagram from '../images/socialMedia/instagram.png';
 
+// Import down arrow
+import downArrow from '../images/icons/arrowDown.png';
+
 function Footer() {
 	return (
 		<div id="footer-container">
@@ -51,7 +54,10 @@ function Footer() {
 				</ul>
 			</div>
 			<div id="footer-bottom">
-				<div id="footer-language">English</div>
+				<div id="footer-language">
+					<span>English</span>{' '}
+					<img src={downArrow} alt="Down Arrow" />
+				</div>
 				<div id="footer-legal">
 					<ul>
 						<li>© iFit.com. All Rights Reserved.</li>
