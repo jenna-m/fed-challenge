@@ -92,20 +92,18 @@ button:hover {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	li {
+		padding: 40px;
+	}
 	li:hover {
 		cursor: pointer;
 	}
-}
-
-#sub-nav-ul li {
-	padding: 40px;
-}
-
-#nav-button button {
-	padding: 10px 15px;
-	box-shadow: 0 1px 2px 0 rgba(46, 49, 52, 0.4);
-	letter-spacing: 0.5px;
-	line-height: 16px;
+	button {
+		padding: 10px 15px;
+		box-shadow: 0 1px 2px 0 rgba(46, 49, 52, 0.4);
+		letter-spacing: 0.5px;
+		line-height: 16px;
+	}
 }
 
 // Hero Styling
@@ -143,15 +141,15 @@ button:hover {
 			opacity: 1;
 		}
 	}
-}
-
-#hero-message #hero-button button {
-	margin-top: 50px;
-	padding: 20px 130px;
-	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
-	letter-spacing: 1px;
-	text-align: center;
-	line-height: 14px;
+	button {
+		margin-top: 50px;
+		padding: 20px 130px;
+		box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.12),
+			0 1px 1px 0 rgba(0, 0, 0, 0.24);
+		letter-spacing: 1px;
+		text-align: center;
+		line-height: 14px;
+	}
 }
 
 // Reviews Styling
@@ -441,6 +439,9 @@ button:hover {
 
 #footer-language {
 	width: 30%;
+	span {
+		padding-right: 5px;
+	}
 }
 
 #footer-legal {
@@ -459,5 +460,99 @@ button:hover {
 	.legal:hover {
 		opacity: 1;
 		cursor: pointer;
+	}
+}
+
+// Mobile responsiveness
+@media screen and (min-width: 300px) and (max-width: 768px) {
+	.navigation {
+		height: 195px;
+	}
+
+	#top-nav {
+		height: 47px;
+		justify-content: flex-start;
+		li {
+			padding: 8px 40px;
+		}
+	}
+
+	#sub-nav {
+		margin: 0;
+		padding: 20px;
+		height: auto;
+		flex-direction: column;
+		align-content: space-between;
+		ul {
+			padding: 20px 0;
+		}
+		li {
+			padding: 15px;
+		}
+	}
+
+	#hero {
+		background-position: center;
+	}
+
+	#hero-message {
+		font-size: 48px;
+		font-weight: bold;
+		button {
+			padding: 25px 50px;
+			width: 98%;
+		}
+	}
+
+	#reviews-container {
+		flex-direction: column;
+	}
+
+	#reviews-controls {
+		display: none;
+	}
+
+	.review-card {
+		width: 80%;
+		margin-bottom: 20px;
+	}
+
+	.review-card:last-child {
+		margin-bottom: 0;
+	}
+
+	#equipment-cards-container {
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.equipment-card {
+		margin-bottom: 25px;
+		padding: 50px 100px 40px;
+	}
+
+	.equipment-card:last-child {
+		margin-bottom: 0;
+	}
+
+	#footer-menu {
+		width: 90%;
+	}
+
+	#footer-bottom {
+		justify-items: center;
+		text-align: center;
+	}
+	#footer-language {
+		width: 25%;
+	}
+
+	#footer-legal {
+		width: 75%;
+		line-height: 24px;
+		li {
+			display: block;
+		}
 	}
 }
