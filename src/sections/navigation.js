@@ -22,12 +22,8 @@ export default class Navigation extends React.Component {
 
 	// method to hide/show navbar on scroll down/up
 	handleScroll = () => {
-		const { prevScrollPosition } = this.state;
-
 		const currentScrollPosition = window.pageYOffset;
-		const visible = prevScrollPosition > currentScrollPosition;
-
-		if (currentScrollPosition > 750) {
+		if (currentScrollPosition > 700) {
 			this.setState({
 				prevScrollPosition: currentScrollPosition,
 				visible: false,
