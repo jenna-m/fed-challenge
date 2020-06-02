@@ -44,6 +44,10 @@ button {
 	border-radius: 5px;
 }
 
+button:hover {
+	cursor: pointer;
+}
+
 // Navigation styling
 #navigation {
 	display: flex;
@@ -78,6 +82,9 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	li:hover {
+		cursor: pointer;
+	}
 }
 
 #sub-nav-ul li {
@@ -141,13 +148,45 @@ button {
 	padding: 25px 0;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	background-color: $review-background;
+}
+
+#reviews-controls {
+	width: 100%;
+	z-index: 10;
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+}
+
+#left-control,
+#right-control {
+	width: 30px;
+	height: 30px;
+	opacity: 0.8;
+	background: #000c28;
+	border-radius: 50%;
+	border: 1px solid rgba(244, 245, 247, 0.32);
+	box-shadow: 0 7px 12px 0 rgba(46, 49, 52, 0.3);
+	img {
+		width: 8px;
+		padding: 9px;
+	}
+}
+
+#right-control img {
+	padding: 9px 12px;
+}
+
+#left-control:hover,
+#right-control:hover {
+	cursor: pointer;
 }
 
 .review-card {
 	width: 25%;
-	padding: 50px;
+	padding: 35px 40px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -306,6 +345,9 @@ button {
 	background: $white;
 	border-radius: 5px;
 	box-shadow: 0 1px 2px 0 rgba(46, 49, 52, 0.4);
+	div:hover {
+		cursor: pointer;
+	}
 }
 
 .equipment-image img {
@@ -340,6 +382,9 @@ button {
 
 .footer-submenu {
 	padding: 50px 0;
+	ul {
+		line-height: 30px;
+	}
 	ul:before {
 		content: attr(aria-label);
 		font-size: 14px;
@@ -369,6 +414,9 @@ button {
 	}
 	li {
 		padding: 0 15px;
+	}
+	img:hover {
+		cursor: pointer;
 	}
 }
 
